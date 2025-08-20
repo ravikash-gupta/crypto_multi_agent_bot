@@ -20,7 +20,7 @@ I can add a backtester that uses historical CryptoQuant + Binance klines to auto
 
 Tell me which of these (package into ZIP, wire LLM calls, backtester, or something else) you want me to do next and I’ll proceed. If you want the ZIP now, say “make zip” and I’ll produce and give you a download link.
 
-    '''
+```
     
 zep/
 │── README.md
@@ -47,5 +47,4 @@ zep/
     ├── __init__.py
     ├── debate_manager.py
 
-
-    '''
+```
