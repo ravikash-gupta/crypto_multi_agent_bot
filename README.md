@@ -12,29 +12,32 @@ and Google Gemini agents that debate and summarize insights.
 
 ```
     
-zep/
-│── README.md
-│── requirements.txt
-│── config.py
-│── main.py
+zep-project/
+│── main.py                  # Entry point, runs prediction + debate
+│── requirements.txt         # Python dependencies
+│── README.md                # Documentation
+│
+├── config/
+│   └── settings.py          # API keys, model configs, thresholds
+│
+├── data/
+│   └── market_data.py       # Functions to fetch/clean aggregated data
 │
 ├── indicators/
-│   ├── __init__.py
-│   ├── onchain_data.py
-│   ├── technicals.py
+│   └── technicals.py        # RSI, MACD, Bollinger, etc.
 │
-├── ai_agents/
-│   ├── __init__.py
-│   ├── openai_agent.py
-│   ├── gemini_agent.py
+├── models/
+│   ├── openai_model.py      # OpenAI-based reasoning
+│   ├── gemini_model.py      # Gemini-based reasoning
+│   └── debate.py            # AI-vs-AI debate mechanism
 │
-├── utils/
-│   ├── __init__.py
-│   ├── logger.py
-│   ├── cryptoquant_api.py
+├── data_sources/
+│   └── cryptoquant_api.py   # CryptoQuant API wrapper
+│   └── glassnode_api.py     # (optional, future)
+│   └── ccxt_api.py          # (optional, for exchange price feeds)
 │
-└── discussions/
-    ├── __init__.py
-    ├── debate_manager.py
+└── utils/
+    └── logger.py            # Logging & debugging
+
 
 ```
